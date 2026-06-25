@@ -20,7 +20,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_product.mk)
 
 ifneq ($(TARGET_NO_TELEPHONY), true)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_product.mk)
-ifeq ($(LINEAGE_BUILD),)
+ifeq ($(CIRCLE_BUILD),)
 PRODUCT_COPY_FILES += \
     device/sample/etc/apns-full-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
 endif
